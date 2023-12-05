@@ -1,0 +1,115 @@
+
+Unity Catalog
+==============
+
+
+Session 1 
+==========
+
+Unity catalog is a unified data governance solution for all the data assets in the
+lakehouse.
+
+Data governance means setting data policies.
+
+tables  (Database objects)
+users   (100 users)
+access policies
+
+
+Basically we have objects and users and we grant permision to users on various objects
+
+All of this is centralized and not just limited to individual workspaces.
+
+
+key features of unity catalog :
+===============================
+
+=> unity catalog allows you to create a centralized metadata layer.
+   so our databases, tables and views can be shared across multiple workspaces.
+
+=> unity catalog security model is based on Standard ANSI SQL and allows 
+   admins to grant permission in their existing datalake using familiar sql syntax.
+
+=> Provides built in Auditing - captures user level audit logs.
+   
+unity catalog captures and audit log of actions performed against the metastore.
+
+This enables admins to access fine-grained details about who accessed a given 
+dataset and what actions they performed.
+
+
+
+
+It offers more feature such as :
+=================================
+
+Delta sharing
+Data lineage
+Data discovery
+
+
+Delta sharing :
+===============
+
+you can easily share existing data in delta lake and parquet formats to any
+computing platform.
+
+It can be done is a very secure manner.
+
+Delta Sharing is an open protocol developed by Databricks for secure data sharing 
+with other organizations regardless of the computing platforms they use.
+
+
+
+Data lineage : we can track how this data has come.
+=============
+
+
+t1
+
+        t3 (sales)
+
+t2
+
+
+Data discovery :
+================
+
+A open search capabality and we can search for anything there.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
