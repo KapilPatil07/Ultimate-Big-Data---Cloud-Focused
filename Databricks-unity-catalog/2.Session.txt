@@ -1,0 +1,96 @@
+
+Session 1 :
+=============
+
+How to configure the metastore in Unity Catalog
+
+two step process
+
+Step 1 : configure storage for your metastore
+
+table is made of - data and metadata
+
+
+1. created storage account - adls gen2
+
+This storage will keep the metadata related to unity catalog metastore and 
+the objects inside it.
+
+for the managed tables this will keep the data also.
+
+Storage account name -  unitycatalogsa
+
+
+2. create a storage container that will hold your unity catalog metastores metadata
+   and managed data.
+
+container - unityroot
+
+
+3. In Azure, create a databricks access connector that holds a managed identity 
+   and give it access to the storage container.
+
+=> created databricks access container - ttdatabricksaccesscon
+
+
+go to storage account
+
+and click on access control(IAM) 
+
+Add -> Add role assignment
+
+role -> storage blob data contributor
+
+assign access to -> managed identity
+
+select member -> select accordingly
+
+we are giving access to above created connector.
+
+-------------------------------------------------------
+
+Step 2 : you will go to your databricks UI and there we will create the metastore.
+	 we can link multiple workspaces to this metastore.
+
+
+create a azure databricks workspace	
+
+requirement while creating the workspace
+
+unity catalog needs the pricing tier as - Premium(role based access controls)
+
+
+created a premium databricks workspace 	- ttdatabricks101ws
+
+
+created one more databrick workspace - standard one
+
+
+
+log in to workspace as an account admin
+
+clicked on data icon
+
+click on create metastore -
+
+-> region should be the same where you have the storage account and the workspaces.
+
+-> path of storage account
+
+-> access connector id 
+
+
+we attached the premium workspace with this metastore.
+
+ 
+
+
+
+
+
+
+
+
+
+
+

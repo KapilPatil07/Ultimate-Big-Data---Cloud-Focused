@@ -90,9 +90,7 @@ user management - users
 Access controls
 
 
-
 Multiple databricks workspaces are linked as it is centralized
-
 
 Withount unity catalog, your metastore, user management and access control are
 defined at the workspace level. Data objects such as databases and tables 
